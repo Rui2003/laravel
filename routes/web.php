@@ -62,9 +62,13 @@ Route::get('/tarefas', function(){
 		'tarefas'=>$tarefas]);
 });
 
-Route::get('/', 'PortalController@index');
+//Route::get('/', 'PortalController@index');
 
-Route::get('listar-equipas', 'PortalController@listarEquipa');
+//Route::get('listar-equipas', 'PortalController@listarEquipa');
 
-Route::get('listar-equipas/{chave}', 'PortalController@listarEquipa');
+//Route::get('listar-equipas/{chave}', 'PortalController@listarEquipa');
+
+Route::get('/', 'PortalController@index')->name('equipas.index');
+Route::get('/listar-equipas','PortalController@listar-equipas')>name('equipas.lista');
+
 
